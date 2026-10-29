@@ -1,0 +1,9 @@
+project: savantenvs/libsrtp
+target: srtp-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/srtp-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/srtp-fuzzer
+    libfuzzer: true
+    timeout: 5
